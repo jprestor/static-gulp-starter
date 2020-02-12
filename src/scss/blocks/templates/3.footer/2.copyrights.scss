@@ -1,0 +1,27 @@
+.page-footer__copyrights {
+  padding: 21px 0 23px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #fff;
+  text-align: center;
+  background-color: #454140;
+
+  @include mob {
+    font-size: 13px;
+  }
+}
+
+.page-footer__copyrights-link {
+  margin: 0 4px;
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @include mob {
+    display: block;
+    margin: 10px 0 0;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,13 @@
+//vendor
+@import "/node_modules/normalize.css/normalize.css";
+@import "/node_modules/slick-carousel/slick/slick.css";
+@import "/node_modules/lightgallery/dist/css/lightgallery.min.css";
+
+//helpers
+@import "./helpers/*.scss";
+
+//global
+@import "./global/*.scss";
+
+//blocks
+@import "./blocks/**/*.scss";

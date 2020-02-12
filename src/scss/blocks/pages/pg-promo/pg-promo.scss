@@ -1,0 +1,8 @@
+.pg-promo__h1 {
+  padding-top: 55px;
+  margin-bottom: 45px;
+
+  @include mob {
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,110 @@
+// setting style
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  @include openSans();
+  font-size: 1rem;
+  color: #000;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: .25s;
+}
+
+button {
+  cursor: pointer;
+  transition: .25s;
+}
+
+.content {
+  p {
+    margin-bottom: 17px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+
+blockquote,
+q {
+  quotes: """";
+  margin: 0;
+}
+
+strong {
+  @include openSans(bold);
+}
+
+//Для картинок
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+img.j-image-polyfill {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  font-family: 'object-fit: cover';
+}
+
+// Класс для скрытия блока
+.hide {
+  display: none;
+}
+
+// Класс для показа блока
+.show {
+  display: block;
+}
+
+.d-desc {
+  @include tablet {
+    display: none;
+  }
+}
+
+.d-mob {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}

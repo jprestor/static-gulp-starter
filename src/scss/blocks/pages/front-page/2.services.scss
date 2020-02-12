@@ -1,0 +1,15 @@
+.front-page__services {
+  padding: 130px 0 70px;
+
+  @include media(1700px) {
+    padding-top: 148px;
+  }
+
+  @include media(1500px) {
+    padding-top: 54px;
+  }
+}
+
+.services__title {
+  margin: 0 0 32px;
+}

@@ -1,0 +1,15 @@
+.video {
+  padding: 54px 0 102px;
+
+  @include mob {
+    padding-bottom: 70px;
+  }
+}
+
+.video__title {
+  margin: 0 0 40px;
+}
+
+.video__file {
+  box-shadow: 4px -2px 35px rgba(0, 0, 0, 0.45);
+}

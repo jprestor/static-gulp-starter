@@ -1,0 +1,105 @@
+//responsive
+@mixin tablet {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mob {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+
+@mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+
+// Миксины
+@mixin flex($jContent: space-between, $aItems: flex-start) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $jContent;
+  align-items: $aItems;
+}
+
+@mixin bg($bSize: cover) {
+  background-size: $bSize;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+// Добавляем object-fit для img,
+// font-family нужен для работы полифила.
+@mixin object-fit($property: none, $direction: center) {
+  object-fit: $property;
+  object-position: $direction;
+  font-family: "object-fit: #{$property}; object-position: #{$direction};";
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+
+// rem ---- em
+@function rem($px) {
+  @return $px / 16px + 0rem;
+}
+
+@function em($px) {
+  @return $px / 16px + 0em;
+}
+
+
+// Убирает браузерные стили у тега button
+/* stylelint-disable  property-no-vendor-prefix */
+@mixin reset-button() {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  text-align: inherit;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+
+  /* Remove excess padding and border in Firefox 4+ */
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,42 @@
+.top-line {
+  background-color: #4c484b;
+}
+
+.top-line__inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 44px;
+
+  @include tablet {
+    height: 34px;
+  }
+}
+
+.top-line__link {
+  margin-right: 21px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+
+  @include tablet {
+    font-size: 16px;
+  }
+
+  @include media(357px) {
+    margin-right: 13px;
+    font-size: 13px;
+  }
+}
+
+.top-line__btn {
+  width: 212px;
+  height: 34px;
+  font-size: 16px;
+
+  @include tablet {
+    width: 164px;
+    height: 26px;
+    font-size: 14px;
+  }
+}

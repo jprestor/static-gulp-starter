@@ -1,0 +1,29 @@
+.banner-to-portfolio {
+  height: 631px;
+  background: url(./img/pg-services/banner-to-portfolio.jpg) center no-repeat;
+
+  @include mob {
+    height: 410px;
+  }
+}
+
+.banner-to-portfolio__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 64px;
+  height: 100%;
+}
+
+.banner-to-portfolio__link {
+  width: 458px;
+
+  @include media(510px) {
+    padding: 5px 10px 7px;
+    width: 250px;
+    height: auto;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+  }
+}

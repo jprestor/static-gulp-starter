@@ -1,0 +1,81 @@
+.modal-form {
+  color: #fff;
+  text-align: center;
+
+  @include mob {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.modal-form__title {
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  @include mob {
+    font-size: 26px;
+  }
+}
+
+.modal-form__txt {
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 1.4;
+
+  @include mob {
+    margin: 0 auto 32px;
+    width: 100%;
+    max-width: 276px;
+    font-size: 16px;
+
+    // Отключаем переносы
+    br {
+      content: "";
+
+      &::after {
+        content: "\0020";
+      }
+    }
+  }
+}
+
+.modal-form__inputs {
+  display: flex;
+  justify-content: space-between;
+
+  @include mob {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.modal-form__input {
+  width: calc(50% - 7px);
+  height: 34px;
+
+  @include mob {
+    max-width: 350px;
+    width: 100%;
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.modal-form__privacy-txt {
+  margin: 6px 0 35px;
+  font-size: 12px;
+  opacity: .51;
+}
+
+.modal-form__submit {
+  margin: 0 auto;
+  height: 38px;
+  width: 204px;
+  font-size: 18px;
+}

@@ -1,0 +1,39 @@
+.intro {
+  position: relative;
+}
+
+.intro__slider-wrapper {
+  position: relative;
+}
+
+.intro__slider {
+  padding: 0;
+}
+
+.intro__slider-arrows {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+}
+
+.intro__form {
+  position: absolute;
+  top: 68.4%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 30px);
+
+  @include media(1500px) {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 60px auto 0;
+    transform: none;
+  }
+
+  @include mob {
+    margin-top: 50px;
+  }
+}

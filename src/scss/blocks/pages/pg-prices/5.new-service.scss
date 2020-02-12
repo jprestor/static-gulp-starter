@@ -1,0 +1,20 @@
+.new-service {
+  padding: 50px 0 62px;
+  color: #fff;
+  text-align: center;
+  background-color: #b4575c;
+}
+
+.new-service__title {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.new-service__txt {
+  font-size: 22px;
+  line-height: 1.25;
+
+  @include mob {
+    font-size: 20px;
+  }
+}

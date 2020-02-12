@@ -1,0 +1,33 @@
+.pg-contacts__links {
+  margin-bottom: 57px;
+}
+
+.pg-contacts__links-contacts {
+  margin-bottom: 32px;
+}
+
+.pg-contacts__links-title {
+  margin-bottom: 28px;
+  color: #b40220;
+  font-weight: 600;
+}
+
+.pg-contacts__socials {
+  display: flex;
+  justify-content: center;
+}
+
+.pg-contacts__social {
+  margin: 0 19px;
+  width: 65px;
+  height: 65px;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  @include mob {
+    width: 50px;
+    height: 50px;
+  }
+}

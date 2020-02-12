@@ -1,0 +1,20 @@
+.j-tabs-content-container {
+  position: relative;
+  height: 0;
+  transition: .3s;
+}
+
+.j-tab-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  visibility: hidden;
+  //  transition: .3s;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

@@ -1,0 +1,9 @@
+.pg-about-us__h1 {
+  padding-top: 35px;
+  margin-bottom: 65px;
+
+  &::before {
+    bottom: -10px;
+    width: 65%;
+  }
+}

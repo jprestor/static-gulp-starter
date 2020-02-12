@@ -1,0 +1,21 @@
+.pg-contacts__images {
+  margin-bottom: 46px;
+}
+
+.pg-contacts__images-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pg-contacts__images-col {
+  position: relative;
+  width: 48.8%;
+}
+
+.pg-contacts__img-small {
+  margin-bottom: 4.8%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
