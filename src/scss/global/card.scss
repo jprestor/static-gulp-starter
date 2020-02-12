@@ -1,0 +1,99 @@
+.card {
+  border: 1px solid #c6c6c6;
+  font-size: 16px;
+  cursor: pointer;
+
+  @include large {
+    font-size: 15px;
+  }
+
+  &:hover {
+    .card__mask {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+/* card__top */
+.card__top {
+  position: relative;
+  height: 230px;
+
+  @include large {
+    height: 180px;
+  }
+}
+
+.card__img {
+  @include object-fit();
+}
+
+.card__badge {
+  position: absolute;
+  bottom: 13px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  height: 25px;
+  background-color: $red;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.card__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-bottom: 10px solid $red;
+  background-color: rgba(52, 52, 52, 0.7);
+  opacity: 0;
+  transition: 0.25s;
+}
+
+.card__link {
+  width: 192px;
+}
+
+/* card__bottom */
+.card__bottom {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 18px 20px 24px 15px;
+  border-top: 1px solid #c6c6c6;
+
+  @include large {
+    padding: 12px 15px 18px 15px;
+  }
+}
+
+.card__date {
+  align-self: flex-end;
+  margin-bottom: 13px;
+  padding-left: 17px;
+  background: url(#{$sprite}calendar-gray) 0 3px no-repeat;
+  background-size: 12px 11px;
+  color: $d-gray;
+}
+
+.card__title {
+  margin-bottom: 22px;
+  min-height: 44px;
+  color: #000;
+  font-weight: 700;
+  font-size: 18px;
+
+  @include large {
+    margin-bottom: 18px;
+    min-height: 42px;
+    font-size: 17px;
+  }
+}

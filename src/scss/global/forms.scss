@@ -1,26 +1,116 @@
-.input {
-  padding: 0 14px;
+.form {
   width: 100%;
-  height: 30px;
-  background-color: #ffffff;
-  border: none;
+  color: $d-gray;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.form__group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .form__input-wrap {
+    width: 48.2%;
+  }
+
+  @include mob {
+    align-items: center;
+    flex-direction: column;
+
+    .form__input-wrap {
+      width: 100%;
+    }
+  }
+}
+
+/* form__input */
+.form__input-wrap {
+  position: relative;
+  display: block;
+  margin-bottom: 25px;
+
+  &--name {
+    background: url(#{$sprite});
+  }
+}
+
+.form__input-name {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  transition: 0.25s;
+
+  i {
+    color: $red;
+  }
+}
+
+.form__input {
+  padding: 14px;
+  width: 100%;
+  border: solid 1px #c6c6c6;
+  border-radius: 10px;
+  background-color: transparent;
+
+  &:focus + .form__input-name,
+  &--selected + .form__input-name {
+    top: -16px;
+    font-size: 13px;
+  }
 
   @include placeholder {
     color: #7c858e;
   }
 }
 
-.textarea {
-  padding: 10px 14px;
-  width: 100%;
-  background-color: #ffffff;
-  border: none;
+/* form__checkbox */
+.form__checkbox-wrap {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
 
-  @include placeholder {
-    color: #7c858e;
+.form__checkbox {
+  display: none;
+
+  &:checked + .form__checkbox-btn::before {
+    opacity: 1;
   }
 }
 
-input.username {
+.form__checkbox-btn {
+  position: relative;
+  flex: none;
+  margin-right: 7px;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #222221;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: 0.2s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 9px;
+    height: 5px;
+    border: 1px solid #222221;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    opacity: 0;
+    transition: 0.25s;
+    transform: rotate(-45deg);
+  }
+}
+
+/* form__submit */
+.form__submit {
+  margin: 20px auto 0;
+}
+
+input[name="username"] {
   display: none;
 }

@@ -1,0 +1,20 @@
+.main-nav__buttons {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 18px;
+  }
+}
+
+.main-nav__contacts {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}

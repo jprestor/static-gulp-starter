@@ -1,0 +1,89 @@
+.bottom-menu {
+  padding: 30px 0 48px;
+  border-top: 1px solid rgba(114, 114, 114, 0.5);
+  background-color: $gray;
+
+  @include large {
+    padding-bottom: 35px;
+  }
+}
+
+.bottom-menu__inner {
+  display: flex;
+
+  @include tablet {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.bottom-menu__logo {
+  margin-right: 170px;
+  width: 98px;
+  height: 129px;
+
+  @include large {
+    margin-right: 84px;
+  }
+
+  @include tablet {
+    margin-right: 0;
+    width: 80px;
+    height: 106px;
+  }
+}
+
+.bottom-menu__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  height: 118px;
+  border: 1px solid $gray;
+  color: rgba(114, 114, 114, 0.5);
+  font-size: 16px;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    margin: 40px 0 30px;
+    height: auto;
+    text-align: center;
+  }
+}
+
+.bottom-menu__list-item {
+  margin-bottom: 18px;
+  padding-right: 120px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+
+  @include large {
+    padding-right: 50px;
+  }
+
+  @include tablet {
+    padding-right: 0;
+  }
+}
+
+/* donate-us */
+.bottom-menu__donate-us {
+  margin-left: auto;
+
+  @include tablet {
+    margin-left: 0;
+  }
+}
+
+.bottom-menu__pay-systems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+}
+
+.bottom-menu__pay-system {
+  &:first-child {
+    margin-right: 14px;
+  }
+}

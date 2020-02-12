@@ -1,9 +1,14 @@
-import "./modules/maps.js";
+import "./jquery.fancybox.js";
+
+import "./modules/maps/maps.js";
+import "./modules/accordion.js";
+import "./modules/forms.js";
 import "./modules/modals.js";
 import "./modules/sliders.js";
 import "./modules/tabs.js";
-import "./modules/readmore.js";
-import "./modules/lightgallery.js";
-import "./modules/preloader.js";
+import "./modules/gallery.js";
+import "./modules/range.js";
+import "./modules/forms.js";
+import "./modules/header/page-header.js";
 
-import "./modules/page-header.js";
+import "./wp-modules/form-send.js";

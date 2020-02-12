@@ -1,0 +1,82 @@
+.slick-track {
+  display: flex;
+}
+
+.slick-slide {
+  height: auto;
+}
+
+.slick-arrow {
+  position: absolute;
+  bottom: 100%;
+  z-index: 1;
+  margin-bottom: 40px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid $red;
+  border-radius: 50%;
+  background-color: transparent;
+  background-image: url(#{$sprite}arrow-red);
+  background-position: 20px 15px;
+  background-size: 10px 18px;
+  background-repeat: no-repeat;
+  font-size: 0;
+  cursor: pointer;
+  transition: background-color 0.25s;
+  &.slick-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: $red;
+    background-image: url(#{$sprite}arrow-white);
+  }
+
+  @include large {
+    margin-bottom: 30px;
+  }
+}
+
+.slick-prev {
+  right: 84px;
+  transform: rotate(-180deg);
+  @include large {
+    right: 78px;
+  }
+}
+
+.slick-next {
+  right: 15px;
+  @include large {
+    right: 9px;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0 0;
+  width: 100%;
+
+  button {
+    display: block;
+    margin: 0 2px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid $red;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 0;
+  }
+
+  li.slick-active button {
+    background: $red;
+  }
+}
+
+/* -- Скрываем неактивные слайды до инициализации --- */
+.intro__slider:not(.slick-initialized) > :nth-child(n + 2) {
+  display: none;
+}

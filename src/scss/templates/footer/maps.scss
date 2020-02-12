@@ -1,0 +1,84 @@
+.map__container {
+  height: 550px;
+
+  @include large {
+    height: 450px;
+  }
+
+  @include mob {
+    height: 350px;
+  }
+}
+
+/* map__plate */
+.map__plate-wrapper {
+  position: relative;
+}
+
+.map__plate {
+  position: absolute;
+  top: 57px;
+  left: 0;
+  z-index: 1;
+  width: 540px;
+  background-color: #fff;
+  font-size: 16px;
+
+  @include large {
+    position: static;
+    width: 100%;
+    font-size: 17px;
+  }
+}
+
+.map__plate-title {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  height: 64px;
+  color: $red;
+  text-transform: uppercase;
+  font-size: 24px;
+
+  @include large {
+    margin-bottom: 25px;
+    padding: 40px 0 0;
+    height: auto;
+  }
+}
+
+.map__plate-body {
+  padding: 25px 30px 34px;
+  border-top: 1px solid #c6c6c6;
+
+  @include large {
+    padding: 0 0 34px;
+    border: none;
+  }
+}
+
+.map__plate-row {
+  display: flex;
+  margin-bottom: 18px;
+  padding-left: 20px;
+  background-repeat: no-repeat;
+
+  &--adress {
+    padding-top: 5px;
+    background-image: url(#{$sprite}location);
+    background-position: left 0;
+    background-size: 15px 20px;
+  }
+
+  &--mail {
+    background-image: url(#{$sprite}mail);
+    background-position: left 5px;
+    background-size: 15px 11px;
+  }
+
+  &--phone {
+    background-image: url(#{$sprite}phone);
+    background-position: left 1px;
+    background-size: 15px 15px;
+  }
+}

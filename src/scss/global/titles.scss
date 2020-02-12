@@ -1,63 +1,76 @@
 .title {
-  color: #b40220;
-  font-size: 30px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
+  margin: 0 0 40px -1px;
+  color: $red;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.2;
+
+  @include large {
+    margin-bottom: 35px;
+    font-size: 38px;
+  }
+
+  @include tablet {
+    text-align: center;
+  }
 
   @include mob {
     font-size: 28px;
   }
 }
 
-.title-h1 {
-  position: relative;
-  margin: 0 auto;
-  width: fit-content;
-  font-size: 36px;
+.title-2 {
+  margin: 0 0 22px -1px;
+  color: $red;
   font-weight: 400;
+  font-size: 30px;
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 98%;
-    height: 3px;
-    background-color: #a70f08;
+  @include tablet {
+    text-align: center;
   }
-
-  @include mob {
-    font-size: 32px;
-  }
-}
-
-.title-h3 {
-  color: #b40220;
-  font-size: 27px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
 
   @include mob {
     font-size: 24px;
   }
 }
 
-.title-h4 {
-  font-size: 24px;
+/* title-line */
+.title-line {
+  display: flex;
+  align-items: baseline;
+  margin: 0 0 40px;
+
+  @include large {
+    margin-bottom: 35px;
+  }
+
+  @include tablet {
+    justify-content: center;
+  }
+
+  @include mob {
+    flex-direction: column;
+    margin: 0 auto 35px;
+    width: fit-content;
+  }
 }
 
-.title-h5 {
-  font-size: 22px;
-  font-weight: 400;
+.title-line__title {
+  margin: 0;
+  text-align: left;
 }
 
-.title-h6 {
-  font-size: 20px;
-}
-
-.title-h7 {
+.title-line__link {
+  margin-left: 36px;
+  color: $d-gray;
   font-size: 18px;
+
+  @include tablet {
+    margin-left: 25px;
+  }
+
+  @include mob {
+    margin: 5px 0 0;
+    font-size: 14px;
+  }
 }

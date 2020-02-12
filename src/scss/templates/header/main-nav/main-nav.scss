@@ -1,0 +1,84 @@
+/* .main-nav
+** .main-nav__inner
+** .main-nav__collapse
+** .page--scroll > * */
+
+.main-nav {
+  position: absolute;
+  z-index: 999;
+  visibility: visible;
+  min-width: 100%;
+  background-color: #fff;
+  opacity: 1;
+  transition: 0.25s;
+
+  &--is-hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  @include tablet {
+    &--act .main-nav__collapse {
+      right: 50px;
+    }
+  }
+}
+
+.main-nav__inner {
+  position: relative;
+}
+
+.main-nav__collapse {
+  padding: 0 90px 0 16px;
+  transition: 0.5s;
+
+  @include large {
+    padding: 0;
+  }
+
+  @include tablet {
+    position: fixed;
+    top: 0;
+    right: 100%;
+    z-index: 1;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 0 40px 50px;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid $black;
+    background-color: #fff;
+  }
+}
+
+/*- Анимация main-nav при скролле страницы
+---------------------- */
+@media (min-width: 1201px) {
+  .page--scroll {
+    .main-nav__inner {
+      height: 60px;
+    }
+
+    .main-nav__list {
+      padding-top: 0;
+
+      @include tablet {
+        padding-top: 30px;
+      }
+    }
+
+    .main-nav__brand {
+      margin-right: 50px;
+    }
+
+    .main-nav__brand-logo {
+      display: none;
+    }
+
+    .main-nav__brand-logo-thin {
+      display: block;
+    }
+  }
+}

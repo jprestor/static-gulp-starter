@@ -1,0 +1,57 @@
+.page-header {
+  position: relative;
+  padding-bottom: 38px; // высота main-nav
+
+  @include large {
+    padding-bottom: 37px;
+  }
+
+  @include tablet {
+    padding-bottom: 0;
+  }
+}
+
+.page-header__btn {
+  margin: 0 7px;
+  padding: 0 15px;
+
+  @include large {
+    margin: 0 5px;
+    padding: 0 10px;
+    height: 44px;
+    font-size: 15px;
+  }
+
+  @include tablet {
+    margin: 0 0 10px;
+  }
+}
+
+.page-header__socials {
+  margin-bottom: 11px;
+
+  @include tablet {
+    margin-bottom: 14px;
+  }
+}
+
+.page-header__phone {
+  margin-bottom: 6px;
+  font-size: 24px;
+
+  @include large {
+    font-size: 20px;
+  }
+
+  @include tablet {
+    margin-bottom: 8px;
+  }
+}
+
+.page-header__mail {
+  font-weight: 600;
+
+  @include large {
+    font-size: 17px;
+  }
+}

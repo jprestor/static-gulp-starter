@@ -5,65 +5,83 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-}
-
-body,
-html {
-  width: 100%;
-  height: 100%;
-}
-
 body {
-  @include openSans();
-  font-size: 1rem;
-  color: #000;
-  line-height: 1.3;
-  -webkit-font-smoothing: antialiased;
   background-color: #fff;
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Proxima Nova", Arial, sans-serif;
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
+
+  &.compensate-for-scrollbar {
+    overflow: hidden;
+    height: 100%;
+    -webkit-overflow-scrolling: touch; // Чтобы проходил скролл по тапу на инпутах
+
+    @media (min-width: 1201px) {
+      // Compensate scrollbar width
+      margin-right: 17px;
+      width: auto;
+
+      // .page-header {
+      //   width: calc(100% - 17px);
+      // }
+
+      .modal--show {
+        padding-right: 17px;
+      }
+    }
+  }
+
+  @include tablet {
+    font-size: 16px;
+  }
 }
 
+/* Links */
 a {
-  text-decoration: none;
   color: inherit;
-  cursor: pointer;
-  transition: .25s;
+  text-decoration: none;
+  transition: 0.25s;
+
+  &[href] {
+    cursor: pointer;
+  }
 }
 
-button {
-  cursor: pointer;
-  transition: .25s;
+.active-link {
+  pointer-events: none;
+}
+
+.list li {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 17px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: $blue;
+  }
 }
 
 .content {
   p {
-    margin-bottom: 17px;
+    margin-bottom: 20px;
 
-    &:last-child {
-      margin-bottom: 0;
-    }
+    // &:last-child {
+    //   margin-bottom: 0;
+    // }
   }
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-}
-
-blockquote,
-q {
-  quotes: """";
-  margin: 0;
-}
-
-strong {
-  @include openSans(bold);
-}
-
-//Для картинок
+/* IMG */
 img,
 svg,
 video {
@@ -78,33 +96,11 @@ svg {
   max-height: 100%;
 }
 
-img.j-image-polyfill {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  font-family: 'object-fit: cover';
-}
-
-// Класс для скрытия блока
-.hide {
-  display: none;
-}
-
-// Класс для показа блока
-.show {
-  display: block;
-}
-
-.d-desc {
-  @include tablet {
-    display: none;
-  }
-}
-
-.d-mob {
-  display: none;
-
-  @include tablet {
-    display: block;
-  }
-}
+// Отключаем переносы
+//br {
+//  content: "";
+//
+//  &::after {
+//    content: "\0020";
+//  }
+//}

@@ -1,12 +1,24 @@
-//responsive
+/* responsive */
+@mixin large {
+  @media screen and (max-width: 1680px) {
+    @content;
+  }
+}
+
 @mixin tablet {
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1240px) {
     @content;
   }
 }
 
 @mixin mob {
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin overFhd {
+  @media screen and (min-width: 1921px) {
     @content;
   }
 }
@@ -17,28 +29,57 @@
   }
 }
 
-
-// Миксины
-@mixin flex($jContent: space-between, $aItems: flex-start) {
+@mixin four-columns-grid() {
   display: flex;
   flex-wrap: wrap;
-  justify-content: $jContent;
+  margin: 0 -15px;
+
+  @include large {
+    margin: 0 -10px;
+  }
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+@mixin four-columns-item() {
+  flex: none;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 370px;
+  width: 100%;
+
+  @include large {
+    max-width: 278px;
+  }
+
+  @include tablet {
+    max-width: 340px;
+  }
+}
+
+@mixin flex($jContent: space-between, $aItems: flex-start) {
+  display: flex;
   align-items: $aItems;
+  flex-wrap: wrap;
+  justify-content: $jContent;
 }
 
 @mixin bg($bSize: cover) {
-  background-size: $bSize;
   background-position: center center;
+  background-size: $bSize;
   background-repeat: no-repeat;
 }
 
-
-// Добавляем object-fit для img,
-// font-family нужен для работы полифила.
-@mixin object-fit($property: none, $direction: center) {
+/* Добавляем object-fit для img, */
+@mixin object-fit($property: cover, $direction: center) {
+  width: 100%;
+  height: 100%;
+  font-family: "object-fit: #{$property}; object-position: #{$direction};";
   object-fit: $property;
   object-position: $direction;
-  font-family: "object-fit: #{$property}; object-position: #{$direction};";
+  // font-family нужен для работы полифила.
 }
 
 @mixin placeholder {
@@ -59,36 +100,25 @@
   }
 }
 
-
-// rem ---- em
-@function rem($px) {
-  @return $px / 16px + 0rem;
-}
-
-@function em($px) {
-  @return $px / 16px + 0em;
-}
-
-
 // Убирает браузерные стили у тега button
 /* stylelint-disable  property-no-vendor-prefix */
 @mixin reset-button() {
-  border: none;
+  overflow: visible;
   margin: 0;
   padding: 0;
   width: auto;
-  overflow: visible;
-  text-align: inherit;
   outline: none;
-  cursor: pointer;
+  border: none;
   background-color: transparent;
 
   /* inherit font & color from ancestor */
   color: inherit;
+  text-align: inherit;
   font: inherit;
 
   /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
   line-height: normal;
+  cursor: pointer;
 
   /* Corrects font smoothing for webkit */
   -webkit-font-smoothing: inherit;
@@ -99,7 +129,7 @@
 
   /* Remove excess padding and border in Firefox 4+ */
   &::-moz-focus-inner {
-    border: 0;
     padding: 0;
+    border: 0;
   }
 }

@@ -1,0 +1,90 @@
+.top-line__inner {
+  display: flex;
+  padding: 16px 15px;
+
+  @include large {
+    justify-content: space-between;
+    padding: 14px 15px;
+  }
+
+  @include tablet {
+    justify-content: flex-start;
+  }
+
+  @include mob {
+    padding: 8px 15px;
+  }
+}
+
+.top-line__logo-link {
+  margin-right: 44px;
+
+  @include large {
+    margin-right: 0;
+    width: 94px;
+  }
+
+  @include tablet {
+    margin-right: 30px;
+  }
+
+  @include mob {
+    margin-right: 12px;
+    width: 68px;
+  }
+}
+
+.top-line__welcome {
+  content: "";
+  margin-right: 112px;
+  padding-top: 40px;
+  color: #b0252d;
+  font-size: 24px;
+
+  @include large {
+    margin-right: 0;
+    padding-top: 28px;
+    font-size: 20px;
+  }
+
+  @include tablet {
+    padding-top: 22px;
+    font-size: 24px;
+  }
+
+  @include mob {
+    padding-top: 15px;
+    font-size: 18px;
+  }
+}
+
+/* .page-header__buttons */
+.top-line__buttons {
+  display: flex;
+  padding-top: 42px;
+
+  @include large {
+    padding-top: 30px;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+/* .page-header__contacts */
+.top-line__contacts {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  padding-right: 25px;
+
+  @include large {
+    margin: 0;
+    padding: 0;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}

@@ -1,0 +1,37 @@
+$range-w: 213px;
+$range-h: 24px;
+
+.irs {
+  // Основная шкала
+  width: $range-w;
+  height: $range-h;
+  background: url(#{$sprite}range-scale-gray) left top no-repeat;
+  background-size: $range-w $range-h;
+}
+
+.irs .irs-bar {
+  // Шкала заполнения
+  top: 0;
+  height: 100%;
+  background: url(#{$sprite}range-scale-red) left top no-repeat;
+  background-size: $range-w $range-h;
+}
+
+.irs .irs-handle {
+  // Ручка
+  top: -7px;
+  width: 13px;
+  height: 36px;
+  background: url(#{$sprite}range-handle) center no-repeat;
+  background-size: 22px;
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* .irs .irs - Блок с различными индикаторами */
+.irs-handle > *,
+.irs-min,
+.irs-max,
+.irs-line,
+.irs-single {
+  display: none !important;
+}

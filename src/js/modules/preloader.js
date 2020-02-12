@@ -1,3 +1,11 @@
 $(function () {
-  $('.j-preloader').delay(800).fadeOut();
+  const $preloader = $('.j-preloader');
+
+  $(window).on('load', () => {
+    $preloader.delay(200).fadeOut();
+  });
+
+  setTimeout(function () {
+    $preloader.fadeOut();
+  }, 5000);
 });

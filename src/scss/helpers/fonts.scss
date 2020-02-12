@@ -1,55 +1,39 @@
+// @font-face {
+//   font-family: 'Calibri';
+//   src: url('./assets/fonts/Calibri/subset-Calibri.woff2') format('woff2'),
+//     url('./assets/fonts/Calibri/subset-Calibri.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
 @font-face {
-  font-family: 'Open Sans';
-  src: url('src/fonts/subset-OpenSans.woff2') format('woff2'),
-    url('src/subset-OpenSans.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/subset-ProximaNova-Light.woff2") format("woff2"),
+    url("./assets/fonts/subset-ProximaNova-Light.woff") format("woff");
+}
+
+@font-face {
   font-weight: normal;
   font-style: normal;
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/subset-ProximaNova-Regular.woff2") format("woff2"),
+    url("./assets/fonts/subset-ProximaNova-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('src/fonts/subset-OpenSans-Semibold.woff2') format('woff2'),
-    url('src/subset-OpenSans-Semibold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/subset-ProximaNova-Semibold.woff2") format("woff2"),
+    url("./assets/fonts/subset-ProximaNova-Semibold.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('src/fonts/subset-OpenSans-Bold.woff2') format('woff2'),
-    url('src/fonts/subset-OpenSans-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
-}
-
-
-
-// font_mixin
-$fontFamily: 'Open Sans';
-
-@mixin openSans($style: regular) {
-  @if $style==light {
-    font-family: $fontFamily, Arial, sans-serif;
-    font-weight: 300;
-  }
-
-  @if $style==regular {
-    font-family: $fontFamily, Arial, sans-serif;
-    font-weight: normal;
-  }
-
-  @if $style==semibold {
-    font-family: $fontFamily, Arial, sans-serif;
-    font-weight: 600;
-  }
-
-  @if $style==bold {
-    font-family: $fontFamily, Arial, sans-serif;
-    font-weight: bold;
-  }
-
-  @if $style==thin {
-    font-family: $fontFamily, Arial, sans-serif;
-    font-weight: 200;
-  }
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/subset-ProximaNova-Bold.woff2") format("woff2"),
+    url("./assets/fonts/subset-ProximaNova-Bold.woff") format("woff");
 }

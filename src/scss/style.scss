@@ -1,13 +1,17 @@
 //vendor
 @import "/node_modules/normalize.css/normalize.css";
 @import "/node_modules/slick-carousel/slick/slick.css";
-@import "/node_modules/lightgallery/dist/css/lightgallery.min.css";
+@import "/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css";
+@import "/node_modules/ion-rangeslider/css/ion.rangeSlider.min.css";
 
 //helpers
-@import "./helpers/*.scss";
+@import "./helpers/**/*.scss";
 
 //global
-@import "./global/*.scss";
+@import "./global/**/*.scss";
 
-//blocks
-@import "./blocks/**/*.scss";
+//templates
+@import "./templates/**/*.scss";
+
+//pages
+@import "./pages/**/*.scss";

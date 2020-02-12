@@ -1,0 +1,67 @@
+.js-accordion-content {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+/* styles */
+.accordion {
+  border: 1px solid #b4b4b4;
+  border-bottom: none;
+}
+
+.accordion__item-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2px 46px 2px 30px;
+  min-height: 54px;
+  border-bottom: 1px solid #b4b4b4;
+  background-color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    width: 10px;
+    height: 18px;
+    background: url(#{$sprite}arrow-red) right center no-repeat;
+    background-size: cover;
+    transition: 0.25s;
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  &.is-active::before {
+    transform: translateY(-50%) rotate(-90deg);
+  }
+
+  @include large {
+    min-height: 44px;
+    font-size: 24px;
+  }
+
+  @include tablet {
+    padding-left: 20px;
+    min-height: 42px;
+    font-size: 20px;
+  }
+
+  @include mob {
+    font-size: 18px;
+  }
+}
+
+.accordion__item-content {
+  padding: 7px 30px 14px;
+  border-bottom: 1px solid #b4b4b4;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  @include tablet {
+    padding: 7px 20px 14px;
+  }
+}

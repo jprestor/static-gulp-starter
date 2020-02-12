@@ -1,0 +1,38 @@
+.secondary-nav {
+  background-color: $gray;
+}
+
+.secondary-nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 109px 0 26px;
+  min-height: 70px;
+  color: $d-gray;
+  text-transform: uppercase;
+  font-size: 18px;
+
+  @include large {
+    padding: 2px 26px 0;
+    min-height: 50px;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px 26px 30px;
+  }
+}
+
+.secondary-nav__link {
+  display: block;
+
+  &:hover,
+  &--current {
+    opacity: 0.7;
+  }
+
+  @include tablet {
+    margin-bottom: 15px;
+  }
+}

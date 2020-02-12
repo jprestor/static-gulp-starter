@@ -1,0 +1,130 @@
+.main-nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+
+  @include large {
+    font-size: 17px;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+  }
+}
+
+.main-nav__link {
+  position: relative;
+  display: block;
+  padding: 8px 0;
+  text-transform: uppercase;
+
+  &:not(.main-nav__link--dropdown)::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: $red;
+    transition: 0.3s;
+  }
+
+  &--current {
+    color: $red;
+  }
+
+  &:hover::before,
+  &--current::before {
+    width: 100%;
+  }
+
+  @include tablet {
+    &::before {
+      bottom: 10px;
+      left: 0;
+      height: 5px;
+      transform: none;
+    }
+  }
+}
+
+.main-nav__link--dropdown {
+  position: relative;
+  padding-right: 22px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 10px;
+    height: 18px;
+    background: url(#{$sprite}arrow-red) right center no-repeat;
+    background-size: cover;
+    transform: rotate(90deg);
+
+    @include large {
+      top: 9px;
+    }
+  }
+}
+
+.main-nav__item {
+  position: relative;
+  padding: 0 12px;
+
+  &:hover {
+    .main-nav__link {
+      color: $red;
+    }
+
+    .main-nav__sub-list {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @include tablet {
+    margin-bottom: 10px;
+  }
+}
+
+.main-nav__sub-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  visibility: hidden;
+  padding: 12px 30px 10px 20px;
+  border: 1px solid $black;
+  border-top: 1px solid $red;
+  background-color: #fff;
+  white-space: nowrap;
+  opacity: 0;
+  transition: 0.25s;
+
+  @include tablet {
+    position: static;
+    visibility: visible;
+    padding: 2px 0 0 20px;
+    border: none;
+    font-size: 15px;
+    opacity: 1;
+  }
+}
+
+.main-nav__sub-link {
+  display: block;
+  margin-bottom: 10px;
+
+  &:hover {
+    color: $red;
+  }
+
+  @include tablet {
+    margin-bottom: 12px;
+  }
+}

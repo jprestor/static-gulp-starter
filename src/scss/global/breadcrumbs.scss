@@ -1,0 +1,24 @@
+.breadcrumbs {
+  display: flex;
+  margin-bottom: 20px;
+  padding-top: 14px;
+  font-size: 16px;
+
+  @include mob {
+    font-size: 14px;
+  }
+}
+
+.breadcrumbs__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.breadcrumbs__path {
+  display: flex;
+  align-items: flex-start;
+  letter-spacing: 0.35px;
+  font-size: 14px;
+}

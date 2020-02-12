@@ -1,17 +1,19 @@
-//jQuery
 import jQuery from "jquery";
-import slick from 'slick-carousel';
-import Readmore from 'readmore-js';
 
-import lightGallery from 'lightgallery';
-import lgAutoplay from 'lg-autoplay';
-import lgFullscreen from 'lg-fullscreen';
-import lgHash from 'lg-hash';
-import lgPager from 'lg-pager';
-import lgShare from 'lg-share';
-import lgThumbnail from 'lg-thumbnail';
-import lgVideo from 'lg-video';
-import lgZoom from 'lg-zoom';
+import slick from "slick-carousel";
+
+import Sticky from "sticky-js";
+
+import objectFitImages from "object-fit-images";
+
+import ionRangeSlider from "ion-rangeslider";
+
+import svgxuse from "svgxuse";
 
 window.$ = window.jQuery = jQuery;
-window.Readmore = Readmore;
+// window.noUiSlider = noUiSlider;
+
+/* Init */
+objectFitImages();
+
+const sticky = new Sticky(".js-main-nav");
