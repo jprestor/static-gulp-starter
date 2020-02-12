@@ -1,0 +1,11 @@
+{
+  "html": {
+    "snippets": {
+      "a": "a[class href]",
+      "img": "img[class src]"
+    }
+  },
+  "css": {
+    "snippets": {}
+  }
+}

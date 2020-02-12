@@ -1,4 +1,4 @@
 {
-"presets": ["@babel/preset-env", "minify"],
-"exclude": "node_modules/**"
+  "presets": ["@babel/env"],
+  "exclude": "node_modules/**"
 }
