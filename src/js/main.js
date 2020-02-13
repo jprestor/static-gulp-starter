@@ -10,5 +10,3 @@ import "./modules/gallery.js";
 import "./modules/range.js";
 import "./modules/forms.js";
 import "./modules/header/page-header.js";
-
-import "./wp-modules/form-send.js";

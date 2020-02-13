@@ -37,7 +37,7 @@ const prod = environments.production;
 
 const path = {
   build: {
-    html: "./build/",
+    root: "./build/",
     css: "./build/css/",
     js: "./build/js/",
     img: "./build/img/",
@@ -70,7 +70,7 @@ const path = {
     fonts: "./src/fonts/**/*"
   },
 
-  serve: "./build"
+  serve: "./build/"
 };
 
 /* -- Tasks -- */
@@ -78,7 +78,7 @@ gulp.task("html", () => {
   return gulp
     .src(path.src.views)
     .pipe(rigger())
-    .pipe(gulp.dest(path.build.html))
+    .pipe(gulp.dest(path.build.root))
     .pipe(browserSync.stream());
 });
 
@@ -231,14 +231,14 @@ gulp.task("set-prod", prod.task);
 
 gulp.task("clean", function() {
   // You can use multiple globbing patterns as you would with `gulp.src`
-  return del([build]);
+  return del([path.build.root]);
 });
 
 gulp.task(
   "build",
   gulp.series(
     "clean",
-    gulp.parallel("css", "libs-js", "custom-js", "img"),
+    gulp.parallel("html", "css", "libs-js", "custom-js", "img"),
     "serve"
   )
 );

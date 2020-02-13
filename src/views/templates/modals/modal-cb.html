@@ -1,0 +1,68 @@
+<div class="modal" data-modal="cb">
+  <div class="modal-inner  modal-cb">
+    <button class="modal-close">
+      <svg width="38" height="38">
+        <use xlink:href="./img/icons/sprite.svg#popup-close"></use>
+      </svg>
+    </button>
+
+    <div class="modal-cb__body">
+      <form class="modal__form  form  js-mail-form">
+        <p class="form__title">
+          <span>Оставьте заявку</span>на бесплатную консультацию
+        </p>
+
+        <input
+          class="form-subject"
+          type="hidden"
+          name="subject"
+          value="Заявка на бесплатную консультацию"
+        />
+        <!-- form_subject -->
+        <input type="text" name="username" />
+        <!-- antispam -->
+
+        <label class="form__input-wrap">
+          <span class="form__input-name">ваше имя</span>
+          <input
+            class="modal__input  form__input"
+            type="text"
+            name="name"
+            placeholder=""
+            required
+          />
+        </label>
+
+        <label class="form__input-wrap">
+          <span class="form__input-name">телефон</span>
+          <input
+            class="modal-form__input  form__input"
+            type="text"
+            name="number"
+            placeholder=""
+            required
+          />
+        </label>
+
+        <label class="modal__checkbox-wrap  form__checkbox-wrap">
+          <input
+            class="modal__input  form__checkbox"
+            type="checkbox"
+            placeholder=""
+            required
+          />
+          <span class="form__checkbox-btn"></span>
+          <p class="form__checkbox-txt">
+            Нажимая на кнопку "Отправить" Вы принимаете условия политики
+            конфиденциальности в отношении обработки персональных данных
+          </p>
+        </label>
+
+        <button type="submit" class="form__submit  btn">
+          <span class="btn__text">Отправить</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- #modal-cb -->
